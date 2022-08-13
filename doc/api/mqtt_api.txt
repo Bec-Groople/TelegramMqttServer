@@ -1,0 +1,29 @@
+发送的主题列表：
+1、激活查询
+topic:active_query,
+payload:{
+"device_id":"xxxxxxx"
+}
+
+2、统计
+topic:device_statistics
+payload:{
+  "device_id":"xxxxxx"，// 设备ID
+  "location":"117.98046112060547,30.632299329789433",// 坐标。数据格式:"经度,纬度"
+  "status":"on/off/error", //设备状态，开机/关机/出现问题
+  "error_code":"402"，// 错误码，方便厂家排查问题
+  "date":287297387293, //日期，时间戳
+  "type":"regular/manual",//消息类型:regular--定期自动统计，manual--用户主动开关机
+}
+
+
+
+
+订阅的主题列表：
+1、设备激活状态
+topic:xxxxxx_active_info,
+payload:
+{
+"status":0, //0--未激活，不可使用，1---已激活，可正常使用
+}
+
